@@ -1,0 +1,42 @@
+@import '../theme';
+
+button {
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-family: $font;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+}
+
+.button-primary {
+  background-color: $primary;
+  color: $white;
+  transition: 0.3s all;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+}
+
+.button-secondary {
+  background-color: $secondary;
+  color: $white;
+  transition: 0.3s all;
+
+  &:hover {
+    background-color: $secondary-hover;
+  }
+}
+
+.button-outlined {
+  background-color: $white;
+  border: 1px solid $primary;
+  color: $primary;
+  transition: 0.3s all;
+
+  &:hover {
+    border: 1px solid $primary-hover;
+    background-color: $grey-lightest;
+  }
+}

@@ -1,0 +1,29 @@
+// Colors
+$primary: #1b4dd7;
+$primary-hover: #123bae;
+$secondary: #2182e2;
+$secondary-hover: #1a6bbf;
+$disabled: #acacac;
+$white: #ffffff;
+$grey-lightest: #f9f9f9;
+$grey-lighter: #dadada;
+$grey-light: #c1c1c1;
+$grey: #a0a0a0;
+$grey-dark: #777777;
+$grey-darker: #5e5e5e;
+$grey-darkest: #444444;
+$black: #222222;
+
+// Typography
+$font: 'Jost', sans-serif;
+
+@font-face {
+  font-family: 'jost';
+  src: url('../public/Jost-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'jost';
+  font-style: italic;
+  src: url('../public/Jost-Italic-VariableFont_wght.ttf');
+}
