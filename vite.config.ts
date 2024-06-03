@@ -1,31 +1,36 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import dts from 'vite-plugin-dts';
-import path from 'path';
+import { defineConfig } from 'vite'
+import { libInjectCss } from 'vite-plugin-lib-inject-css'
+import { extname, relative, resolve } from 'path'
+import { fileURLToPath } from 'node:url'
+import { glob } from 'glob'
+import react from '@vitejs/plugin-react'
+import dts from 'vite-plugin-dts'
 
 export default defineConfig({
-  plugins: [
-    react(),
-    dts({
-      insertTypesEntry: true,
-      outDir: 'dist/types',
-    }),
-  ],
+  plugins: [react(), libInjectCss(), dts({ include: ['lib'] })],
   build: {
+    copyPublicDir: false,
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'Cobalt UI',
-      formats: ['es', 'cjs', 'umd'],
-    //   fileName: (format) => `my-component-library.${format}.js`
+      entry: resolve(__dirname, 'lib/index.ts'),
+      formats: ['es']
     },
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: ['react', 'react/jsx-runtime'],
+      input: Object.fromEntries(
+        glob.sync('lib/**/*.{ts,tsx}', {
+          ignore: ["lib/**/*.d.ts"],
+        }).map(file => [
+          relative(
+            'lib',
+            file.slice(0, file.length - extname(file).length)
+          ),
+          fileURLToPath(new URL(file, import.meta.url))
+        ])
+      ),
       output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM'
-        }
+        assetFileNames: 'assets/[name][extname]',
+        entryFileNames: '[name].js',
       }
     }
   }
-});
+})
