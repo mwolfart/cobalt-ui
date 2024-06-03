@@ -18,7 +18,7 @@ export default defineConfig({
       external: ['react', 'react/jsx-runtime'],
       input: Object.fromEntries(
         glob.sync('lib/**/*.{ts,tsx}', {
-          ignore: ["lib/**/*.d.ts"],
+          ignore: ["lib/**/*.d.ts", "lib/**/*.stories.tsx"],
         }).map(file => [
           relative(
             'lib',
