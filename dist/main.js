@@ -1,4 +1,4 @@
 import { Button as r } from "./button/index.js";
-import './assets/main.css';export {
+export {
   r as Button
 };
