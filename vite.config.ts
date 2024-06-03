@@ -4,9 +4,10 @@ import { fileURLToPath } from 'node:url'
 import { glob } from 'glob'
 import react from '@vitejs/plugin-react'
 import dts from 'vite-plugin-dts'
+import { libInjectCss } from 'vite-plugin-lib-inject-css'
 
 export default defineConfig({
-  plugins: [react(), dts({ include: ['lib'] })],
+  plugins: [react(), libInjectCss(), dts({ include: ['lib'] })],
   build: {
     copyPublicDir: false,
     lib: {
@@ -16,9 +17,7 @@ export default defineConfig({
     rollupOptions: {
       external: ['react', 'react/jsx-runtime'],
       input: Object.fromEntries(
-        glob.sync('lib/**/*.{ts,tsx}', {
-          ignore: ["lib/**/*.d.ts", "lib/**/*.stories.tsx"],
-        }).map(file => [
+        glob.sync('lib/**/*.{ts,tsx}', { ignore: 'lib/**/*.stories.tsx'}).map(file => [
           relative(
             'lib',
             file.slice(0, file.length - extname(file).length)
