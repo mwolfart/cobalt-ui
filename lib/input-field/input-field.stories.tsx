@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { InputField } from '.';
 
 const meta = {
-  title: 'Example/InputField',
+  title: 'Components/InputField',
   component: InputField,
   render: ({ ...args }) => <InputField {...args} />,
 } satisfies Meta<typeof InputField>;

@@ -41,6 +41,7 @@ button {
 
   &:hover {
     border: 1px solid $primary-hover;
-    background-color: $grey-lightest;
+    color: $white;
+    background-color: $primary;
   }
 }
