@@ -1,14 +1,15 @@
-import { PropsWithChildren } from 'react';
+import { ButtonHTMLAttributes, PropsWithChildren } from 'react';
 import './styles.scss';
 
 type Props = {
   variant: 'primary' | 'secondary' | 'outlined';
   onClick: () => void;
-} & PropsWithChildren;
+} & ButtonHTMLAttributes<HTMLButtonElement> &
+  PropsWithChildren;
 
-export const Button = ({ variant, onClick, children }: Props) => {
+export const Button = ({ variant, onClick, children, ...props }: Props) => {
   return (
-    <button className={`button-${variant}`} onClick={onClick}>
+    <button {...props} className={`button-${variant}`} onClick={onClick}>
       {children}
     </button>
   );
