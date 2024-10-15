@@ -1,0 +1,32 @@
+@import '../theme';
+
+.textarea {
+  font-family: $font;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid $grey-light;
+  transition: 0.3s all;
+  outline: 1px solid transparent;
+
+  &:focus {
+    outline: 1px solid $primary;
+  }
+}
+
+.resize-none {
+  resize: none;
+}
+
+.resize-x {
+  resize: horizontal;
+}
+
+.resize-y {
+  resize: vertical;
+}
+
+.resize-both {
+  resize: both;
+}
