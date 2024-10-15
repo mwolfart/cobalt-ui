@@ -38,3 +38,12 @@ export const Zip: Story = {
     value: '12345',
   },
 };
+
+export const WithError: Story = {
+  name: 'Text with Error',
+  args: {
+    type: 'text',
+    value: 'Input example',
+    error: 'This field is required',
+  },
+};

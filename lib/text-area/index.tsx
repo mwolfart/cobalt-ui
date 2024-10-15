@@ -1,4 +1,4 @@
-import { PropsWithChildren, TextareaHTMLAttributes } from 'react';
+import { forwardRef, PropsWithChildren, TextareaHTMLAttributes } from 'react';
 import './styles.scss';
 
 type Props = {
@@ -6,7 +6,9 @@ type Props = {
 } & TextareaHTMLAttributes<HTMLTextAreaElement> &
   PropsWithChildren;
 
-export const TextArea = ({ resize = 'both', ...props }: Props) => {
-  const className = `textarea resize-${resize}`;
-  return <textarea className={className} {...props} />;
-};
+export const TextArea = forwardRef<HTMLTextAreaElement, Props>(
+  ({ resize = 'both', ...props }, ref) => {
+    const className = `textarea resize-${resize}`;
+    return <textarea ref={ref} className={className} {...props} />;
+  }
+);

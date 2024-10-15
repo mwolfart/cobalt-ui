@@ -3,6 +3,9 @@
 .input-wrapper {
   position: relative;
   width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 
   input {
     padding: 8px 16px;
@@ -22,8 +25,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    bottom: 0;
-    padding: 0 4px;
+    padding: 5px 4px;
     margin: 8px;
     color: $grey-light;
     background-color: transparent;
@@ -38,4 +40,15 @@
       background-color: rgba($primary, 0.15);
     }
   }
+
+  span {
+    font-size: 14px;
+    font-family: $font;
+    text-align: right;
+    color: $error;
+  }
+}
+
+.input-wrapper.error input {
+  border-color: $error;
 }
