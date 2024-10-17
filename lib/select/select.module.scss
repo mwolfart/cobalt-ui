@@ -1,0 +1,37 @@
+@import '../theme';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.select {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-family: $font;
+  border: 1px solid $grey-light;
+  font-size: 16px;
+  transition: 0.3s all;
+  outline: 1px solid transparent;
+  appearance: none;
+
+  &:focus {
+    outline: 1px solid $primary;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  pointer-events: none;
+}
