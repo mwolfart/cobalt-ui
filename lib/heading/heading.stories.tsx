@@ -6,6 +6,7 @@ const meta = {
   title: 'Components/Heading',
   component: Heading,
   render: ({ ...args }) => <Heading {...args} />,
+  tags: ['autodocs'],
 } satisfies Meta<typeof Heading>;
 
 export default meta;

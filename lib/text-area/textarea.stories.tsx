@@ -6,6 +6,7 @@ const meta = {
   title: 'Components/Text Area',
   component: TextArea,
   render: ({ ...args }) => <TextArea {...args} />,
+  tags: ['autodocs'],
 } satisfies Meta<typeof TextArea>;
 
 export default meta;

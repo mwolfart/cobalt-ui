@@ -6,6 +6,7 @@ const meta = {
   title: 'Components/Typography',
   component: Typography,
   render: ({ ...args }) => <Typography {...args} />,
+  tags: ['autodocs'],
 } satisfies Meta<typeof Typography>;
 
 export default meta;

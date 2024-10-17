@@ -6,6 +6,7 @@ const meta = {
   title: 'Components/Button',
   component: Button,
   render: ({ ...args }) => <Button {...args}>Example</Button>,
+  tags: ['autodocs'],
 } satisfies Meta<typeof Button>;
 
 export default meta;

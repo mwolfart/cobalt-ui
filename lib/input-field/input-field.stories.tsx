@@ -6,6 +6,7 @@ const meta = {
   title: 'Components/Input Field',
   component: InputField,
   render: ({ ...args }) => <InputField {...args} />,
+  tags: ['autodocs'],
 } satisfies Meta<typeof InputField>;
 
 export default meta;
