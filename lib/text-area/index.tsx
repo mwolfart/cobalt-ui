@@ -7,8 +7,8 @@ type Props = {
   PropsWithChildren;
 
 export const TextArea = forwardRef<HTMLTextAreaElement, Props>(
-  ({ resize = 'both', ...props }, ref) => {
-    const className = `textarea resize-${resize}`;
+  ({ resize = 'both', className: customClasses, ...props }, ref) => {
+    const className = `textarea resize-${resize} ${customClasses}`;
     return <textarea ref={ref} className={className} {...props} />;
   }
 );

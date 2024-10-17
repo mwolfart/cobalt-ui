@@ -7,8 +7,14 @@ type Props = {
 } & PropsWithChildren &
   HTMLAttributes<HTMLHeadingElement>;
 
-export const Heading = ({ children, variant = 'h1', as, ...props }: Props) => {
-  const className = `heading-base heading-${as ? as.replace('h', '') : variant.replace('h', '')}`;
+export const Heading = ({
+  children,
+  variant = 'h1',
+  as,
+  className: customClasses,
+  ...props
+}: Props) => {
+  const className = `heading-base heading-${as ? as.replace('h', '') : variant.replace('h', '')} ${customClasses}`;
 
   switch (variant) {
     default:

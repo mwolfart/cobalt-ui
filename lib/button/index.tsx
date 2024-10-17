@@ -7,9 +7,19 @@ type Props = {
 } & ButtonHTMLAttributes<HTMLButtonElement> &
   PropsWithChildren;
 
-export const Button = ({ variant, onClick, children, ...props }: Props) => {
+export const Button = ({
+  variant,
+  onClick,
+  children,
+  className,
+  ...props
+}: Props) => {
   return (
-    <button {...props} className={`button-${variant}`} onClick={onClick}>
+    <button
+      {...props}
+      className={`button-${variant} ${className}`}
+      onClick={onClick}
+    >
       {children}
     </button>
   );
