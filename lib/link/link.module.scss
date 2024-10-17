@@ -1,0 +1,18 @@
+@import '../theme';
+
+.anchor {
+  color: $primary;
+  font-family: $font;
+  transition: 0.3s all;
+  text-decoration: underline;
+  text-decoration-color: $primary;
+  text-transform: none;
+
+  &:hover {
+    text-decoration-color: transparent;
+  }
+}
+
+.button {
+  text-decoration: none;
+}

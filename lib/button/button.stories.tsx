@@ -32,3 +32,10 @@ export const Outlined: Story = {
     onClick: () => {},
   },
 };
+
+export const Link: Story = {
+  args: {
+    variant: 'link',
+    onClick: () => {},
+  },
+};

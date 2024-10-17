@@ -1,6 +1,6 @@
 @import '../theme';
 
-button {
+.button {
   padding: 8px 24px;
   border-radius: 64px;
   font-family: $font;
@@ -11,7 +11,7 @@ button {
   font-weight: 600;
 }
 
-.button-primary {
+.primary {
   background-color: $primary;
   border: 1px solid transparent;
   color: $white;
@@ -22,7 +22,7 @@ button {
   }
 }
 
-.button-secondary {
+.secondary {
   background-color: $secondary;
   border: 1px solid transparent;
   color: $white;
@@ -33,7 +33,7 @@ button {
   }
 }
 
-.button-outlined {
+.outlined {
   background-color: $white;
   border: 1px solid $primary;
   color: $primary;
@@ -43,5 +43,20 @@ button {
     border: 1px solid $primary-hover;
     color: $white;
     background-color: $primary;
+  }
+}
+
+.link {
+  background-color: transparent;
+  border: none;
+  color: $primary;
+  transition: 0.3s all;
+  text-decoration: underline;
+  text-decoration-color: $primary;
+  text-transform: none;
+  padding: 0;
+
+  &:hover {
+    text-decoration-color: transparent;
   }
 }
