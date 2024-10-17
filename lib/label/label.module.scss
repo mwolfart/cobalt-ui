@@ -1,0 +1,16 @@
+@import '../theme';
+
+.label {
+  font-family: $font;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  color: $black;
+  font-weight: 600;
+
+  small {
+    color: $error;
+    padding-inline: 2px;
+    font-weight: 700;
+  }
+}

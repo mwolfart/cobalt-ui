@@ -1,5 +1,5 @@
 import { HTMLAttributes, PropsWithChildren } from 'react';
-import './styles.scss';
+import css from './typography.module.scss';
 
 type Props = { variant?: 'default' | 'small' } & PropsWithChildren &
   HTMLAttributes<HTMLParagraphElement>;
@@ -10,7 +10,7 @@ export const Typography = ({
   className,
   ...props
 }: Props) => {
-  const classes = `paragraph ${variant === 'small' ? 'small' : ''} ${className}`;
+  const classes = `${css.paragraph} ${variant === 'small' ? css.small : ''} ${className}`;
   return (
     <p className={classes} {...props}>
       {children}

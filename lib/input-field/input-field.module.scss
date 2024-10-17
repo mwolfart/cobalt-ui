@@ -1,6 +1,6 @@
 @import '../theme';
 
-.input-wrapper {
+.wrapper {
   position: relative;
   width: fit-content;
   display: flex;
@@ -49,6 +49,6 @@
   }
 }
 
-.input-wrapper.error input {
+.error input {
   border-color: $error;
 }

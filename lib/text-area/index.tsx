@@ -1,5 +1,5 @@
 import { forwardRef, PropsWithChildren, TextareaHTMLAttributes } from 'react';
-import './styles.scss';
+import css from './textarea.module.scss';
 
 type Props = {
   resize?: 'none' | 'both' | 'x' | 'y';
@@ -8,7 +8,7 @@ type Props = {
 
 export const TextArea = forwardRef<HTMLTextAreaElement, Props>(
   ({ resize = 'both', className: customClasses, ...props }, ref) => {
-    const className = `textarea resize-${resize} ${customClasses}`;
+    const className = `${css.textarea} ${css[`resize-${resize}`]} ${customClasses}`;
     return <textarea ref={ref} className={className} {...props} />;
   }
 );

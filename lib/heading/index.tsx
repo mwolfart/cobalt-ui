@@ -1,5 +1,5 @@
 import { HTMLAttributes, PropsWithChildren } from 'react';
-import './styles.scss';
+import css from './heading.module.scss';
 
 type Props = {
   variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
@@ -14,7 +14,7 @@ export const Heading = ({
   className: customClasses,
   ...props
 }: Props) => {
-  const className = `heading-base heading-${as ? as.replace('h', '') : variant.replace('h', '')} ${customClasses}`;
+  const className = [css.base, css[as || variant], customClasses].join(' ');
 
   switch (variant) {
     default:

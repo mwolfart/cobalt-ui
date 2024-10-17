@@ -4,7 +4,7 @@ import {
   PropsWithChildren,
   useState,
 } from 'react';
-import './styles.scss';
+import css from './input-field.module.scss';
 import {
   getFormattedValue,
   InputSupportedTypes,
@@ -47,7 +47,7 @@ export const InputField = forwardRef<HTMLInputElement, Props>(
 
     return (
       <div
-        className={`input-wrapper ${error ? 'error' : ''} ${wrapperClasses}`}
+        className={`${css.wrapper} ${error ? css.error : ''} ${wrapperClasses}`}
       >
         <input
           type={type === 'password' ? passwordType : innerType}
