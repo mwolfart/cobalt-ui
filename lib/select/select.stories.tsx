@@ -17,6 +17,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const options = [
+  { value: '', label: 'Select a fruit' },
   { value: 'apple', label: 'Apple' },
   { value: 'orange', label: 'Orange' },
   { value: 'banana', label: 'Banana' },
