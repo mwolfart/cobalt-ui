@@ -1,0 +1,46 @@
+@import '../theme';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 16px;
+}
+
+.selector {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.tabButton {
+  padding: 8px 16px;
+  border: 1px solid $primary;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: $white;
+  font-family: $font;
+  font-weight: 700;
+  color: $primary;
+  font-size: 16px;
+  transition: 0.3s all;
+  outline: 1px solid transparent;
+  cursor: pointer;
+
+  &:focus {
+    outline: 1px solid $primary;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.activeTab {
+  background-color: $primary;
+  color: $white;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+}
