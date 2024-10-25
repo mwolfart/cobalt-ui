@@ -7,6 +7,7 @@ import { Tab, TabGroup } from '.';
 const meta = {
   title: 'Components/Tabs',
   component: TabGroup,
+  tags: ['autodocs'],
   render: ({ ...args }) => <TabGroup {...args} />,
 } satisfies Meta<typeof TabGroup>;
 

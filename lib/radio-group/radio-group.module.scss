@@ -1,0 +1,49 @@
+@import '../theme';
+
+.radioWrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+.radioLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 64px;
+  color: $black;
+  background-color: $grey-lighter;
+  cursor: pointer;
+  font-family: $font;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $grey-light;
+  }
+
+  label {
+    cursor: inherit;
+  }
+
+  input {
+    accent-color: $primary;
+    margin-block: 0;
+    cursor: inherit;
+  }
+}
+
+.labelChecked {
+  box-shadow: 0 0 0 1px $primary;
+}
+
+.labelDisabled {
+  color: $grey;
+  cursor: disabled;
+}
