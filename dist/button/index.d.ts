@@ -1,8 +1,8 @@
-import { PropsWithChildren } from 'react';
+import { ButtonHTMLAttributes, PropsWithChildren } from 'react';
 
 type Props = {
-    variant: 'primary' | 'secondary' | 'outlined';
+    variant: 'primary' | 'secondary' | 'outlined' | 'link';
     onClick: () => void;
-} & PropsWithChildren;
-export declare const Button: ({ variant, onClick, children }: Props) => import("react/jsx-runtime").JSX.Element;
+} & ButtonHTMLAttributes<HTMLButtonElement> & PropsWithChildren;
+export declare const Button: ({ variant, onClick, children, className, ...props }: Props) => import("react/jsx-runtime").JSX.Element;
 export {};
