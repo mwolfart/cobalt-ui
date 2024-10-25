@@ -45,5 +45,8 @@
 
 .labelDisabled {
   color: $grey;
-  cursor: disabled;
+  cursor: not-allowed;
+  &:hover {
+    background-color: $grey-lighter;
+  }
 }

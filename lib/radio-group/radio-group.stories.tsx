@@ -43,6 +43,7 @@ export const Vertical: Story = {
     name: 'test',
     options,
     value: 'one',
+    orientation: 'vertical',
   },
 };
 
