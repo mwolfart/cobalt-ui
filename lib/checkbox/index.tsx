@@ -1,3 +1,5 @@
+'use client';
+
 import { forwardRef } from 'react';
 import css from './checkbox.module.scss';
 

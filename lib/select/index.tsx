@@ -1,3 +1,5 @@
+'use client';
+
 import { forwardRef } from 'react';
 import { FaChevronDown } from 'react-icons/fa6';
 import { FaInfoCircle } from 'react-icons/fa';

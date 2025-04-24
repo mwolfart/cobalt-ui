@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { TabProps } from './tab';
 import css from './tab-group.module.scss';

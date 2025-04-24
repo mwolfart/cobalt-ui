@@ -1,3 +1,5 @@
+'use client';
+
 import { ButtonHTMLAttributes, PropsWithChildren } from 'react';
 import css from './button.module.scss';
 

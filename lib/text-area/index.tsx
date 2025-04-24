@@ -1,3 +1,5 @@
+'use client';
+
 import { forwardRef, PropsWithChildren, TextareaHTMLAttributes } from 'react';
 import css from './textarea.module.scss';
 
