@@ -19,6 +19,14 @@ export const Primary: Story = {
   },
 };
 
+export const PrimaryDisabled: Story = {
+  args: {
+    variant: 'primary',
+    onClick: () => {},
+    disabled: true,
+  },
+};
+
 export const Secondary: Story = {
   args: {
     variant: 'secondary',
@@ -26,10 +34,26 @@ export const Secondary: Story = {
   },
 };
 
+export const SecondaryDisabled: Story = {
+  args: {
+    variant: 'secondary',
+    onClick: () => {},
+    disabled: true,
+  },
+};
+
 export const Outlined: Story = {
   args: {
     variant: 'outlined',
     onClick: () => {},
+  },
+};
+
+export const OutlinedDisabled: Story = {
+  args: {
+    variant: 'outlined',
+    onClick: () => {},
+    disabled: true,
   },
 };
 
